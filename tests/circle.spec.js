@@ -39,35 +39,12 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(circle()).toBeUndefined();
 
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    let circumference = circle(2).circumference;
-    const objCircumference = {
-      value: circumference,
-    };
-
-    const objectCircumEqual = {
-      value: 12.56
-    }
-    expect(objCircumference).toEqual(objectCircumEqual);
+    expect(circle(2).circumference).toEqual(12.56);
 
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    let area = circle(3).area;
-    const objArea = {
-      value: area,
-    };
-
-    const objectAreaEqual = {
-      value: 28.25,
-    };
-    expect(objectAreaEqual).toEqual(objectAreaEqual)
+    expect(circle(3).area).toBeCloseTo(28.26)
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    let circumfer = circle(3).circumference;
-    const objCircference = {
-      value: circumference,
-    };
-
-    const objectCircEqual = {
-      value: 18.84,
-    };
+    expect(circle(3).circumference).toEqual(18.84);
   });
 });
